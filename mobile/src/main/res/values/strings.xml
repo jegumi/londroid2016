@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RemoteControl</string>
+    <string name="preferences">Settings</string>
+</resources>

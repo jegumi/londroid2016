@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.jegumi.remotecontrol.ui.settings.EditTextPreferencesWithValue
+        android:key="ip"
+        android:summary="Please provide the ip of your box"
+        android:title="IP Box address"/>
+
+    <com.jegumi.remotecontrol.ui.settings.EditTextPreferencesWithValue
+        android:key="port"
+        android:summary="Please provide the port of your box"
+        android:title="Port Box address"/>
+
+</PreferenceScreen>
