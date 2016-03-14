@@ -8,5 +8,6 @@
     android:layout_height="match_parent"
     app:rectLayout="@layout/rect_activity_main"
     app:roundLayout="@layout/round_activity_main"
+    android:layout_gravity="center"
     tools:context=".MainActivity"
     tools:deviceIds="wear"/>

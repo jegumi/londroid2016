@@ -19,35 +19,19 @@ public class RemoteHelper {
     private static final String TAG = RemoteHelper.class.getSimpleName();
     private static final String KEYPRESS_PATH = "keypress";
 
-    public enum RemoteCommands {
-        up,
-        down,
-        left,
-        right,
-        select,
-        back,
-        play,
-        launch,
-        home
-    }
-
-    public static String getRemoteUrl(Context context, RemoteCommands command) {
-        if (command == RemoteCommands.launch) {
-            command = RemoteCommands.home;
-        }
-
+    public static String getRemoteUrl(Context context, String command) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         String ip = sharedPreferences.getString(RemoteSettingsActivity.IP_KEY, RemoteSettingsActivity.IP_DEFAULT_VALUE);
         String port = sharedPreferences.getString(RemoteSettingsActivity.PORT_KEY, RemoteSettingsActivity.PORT_DEFAULT_VALUE);
 
         Uri.Builder builder = Uri.parse("http://" + ip + ":" + port).buildUpon();
         builder.appendPath(KEYPRESS_PATH);
-        builder.appendPath(command.toString());
+        builder.appendPath(command);
 
         return builder.toString();
     }
 
-    public static void sendMessageToBox(Context context, RemoteCommands command) {
+    public static void sendMessageToBox(Context context, String command) {
         RequestQueue queue = Volley.newRequestQueue(context);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, getRemoteUrl(context, command),
                 new Response.Listener<String>() {
