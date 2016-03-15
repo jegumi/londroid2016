@@ -3,10 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
-    android:layout_gravity="center"
-    android:columnCount="3"
-    android:gravity="center"
-    android:orientation="horizontal">
+    android:columnCount="3">
 
     <ImageButton
         android:id="@+id/back"
@@ -45,10 +42,8 @@
         android:src="@drawable/ic_keyboard_arrow_right_white_48dp" />
 
     <TextView
-        android:id="@+id/bottom_left"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+        android:layout_height="wrap_content" />
 
     <ImageButton
         android:id="@+id/down"
@@ -57,9 +52,7 @@
         android:src="@drawable/ic_keyboard_arrow_down_white_48dp" />
 
     <TextView
-        android:id="@+id/bottom_right"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+        android:layout_height="wrap_content" />
 
 </GridLayout>
