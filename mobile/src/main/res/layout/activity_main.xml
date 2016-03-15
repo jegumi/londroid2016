@@ -21,43 +21,42 @@
         tools:deviceIds="wear_round">
 
         <ImageButton
-            android:id="@+id/backButton"
+            android:id="@+id/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_backspace_white_48dp" />
+            android:src="@drawable/back_button" />
 
         <ImageButton
             android:id="@+id/up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_keyboard_arrow_up_white_48dp" />
+            android:src="@drawable/up_button" />
 
         <ImageButton
             android:id="@+id/launch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launch_white_48dp" />
+            android:src="@drawable/launch_button" />
 
         <ImageButton
             android:id="@+id/left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_keyboard_arrow_left_white_48dp" />
+            android:src="@drawable/left_button" />
 
         <ImageButton
             android:id="@+id/select"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_album_white_48dp" />
+            android:src="@drawable/select_button" />
 
         <ImageButton
             android:id="@+id/right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_keyboard_arrow_right_white_48dp" />
+            android:src="@drawable/right_button" />
 
         <TextView
-            android:id="@+id/bottom_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -65,10 +64,9 @@
             android:id="@+id/down"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_keyboard_arrow_down_white_48dp" />
+            android:src="@drawable/down_button" />
 
         <TextView
-            android:id="@+id/bottom_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

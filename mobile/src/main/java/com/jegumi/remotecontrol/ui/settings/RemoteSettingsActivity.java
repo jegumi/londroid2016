@@ -4,7 +4,9 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 
 import com.jegumi.remotecontrol.R;
 
@@ -19,14 +21,23 @@ public class RemoteSettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.settings);
+        setActionBar();
         loadFragment();
+    }
+
+    public void setActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     public void loadFragment() {
         FragmentManager mFragmentManager = getFragmentManager();
         FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
         PrefsFragment mPrefsFragment = new PrefsFragment();
-        mFragmentTransaction.replace(android.R.id.content, mPrefsFragment);
+        mFragmentTransaction.replace(R.id.fragment_container, mPrefsFragment);
         mFragmentTransaction.commit();
     }
 
@@ -37,5 +48,14 @@ public class RemoteSettingsActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.preferences);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

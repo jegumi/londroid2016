@@ -12,14 +12,14 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivityPresenter {
 
-    public static final int CONNECTION_TIME_OUT_MS = 2000;
-    private static final String UP_BUTTON_CODE = "up";
-    private static final String DOWN_BUTTON_CODE = "down";
-    private static final String LEFT_BUTTON_CODE = "left";
-    private static final String RIGHT_BUTTON_CODE = "right";
-    private static final String SELECT_BUTTON_CODE = "select";
-    private static final String BACK_BUTTON_CODE = "back";
-    private static final String LAUNCH_BUTTON_CODE = "home";
+    private static final int CONNECTION_TIME_OUT_MS = 2000;
+    private static final String UP_BUTTON_COMMAND = "up";
+    private static final String DOWN_BUTTON_COMMAND = "down";
+    private static final String LEFT_BUTTON_COMMAND = "left";
+    private static final String RIGHT_BUTTON_COMMAND = "right";
+    private static final String SELECT_BUTTON_COMMAND = "select";
+    private static final String BACK_BUTTON_COMMAND = "back";
+    private static final String LAUNCH_BUTTON_COMMAND = "home";
 
     private Context mContext;
     private String mNodeId;
@@ -65,20 +65,20 @@ public class MainActivityPresenter {
 
     private String getCommandForButton(int resId) {
         switch (resId) {
-            case R.id.backButton:
-                return BACK_BUTTON_CODE;
+            case R.id.back:
+                return BACK_BUTTON_COMMAND;
             case R.id.up:
-                return UP_BUTTON_CODE;
+                return UP_BUTTON_COMMAND;
             case R.id.left:
-                return LEFT_BUTTON_CODE;
+                return LEFT_BUTTON_COMMAND;
             case R.id.select:
-                return SELECT_BUTTON_CODE;
+                return SELECT_BUTTON_COMMAND;
             case R.id.right:
-                return RIGHT_BUTTON_CODE;
+                return RIGHT_BUTTON_COMMAND;
             case R.id.down:
-                return DOWN_BUTTON_CODE;
+                return DOWN_BUTTON_COMMAND;
             default:
-                return LAUNCH_BUTTON_CODE;
+                return LAUNCH_BUTTON_COMMAND;
         }
     }
 }

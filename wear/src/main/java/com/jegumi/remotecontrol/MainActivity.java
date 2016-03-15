@@ -14,8 +14,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mMainActivityPresenter = new MainActivityPresenter(this);
         initFields();
+        mMainActivityPresenter = new MainActivityPresenter(this);
     }
 
     private void initFields() {
@@ -23,7 +23,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         watchViewStub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
-                stub.findViewById(R.id.backButton).setOnClickListener(MainActivity.this);
+                stub.findViewById(R.id.back).setOnClickListener(MainActivity.this);
                 stub.findViewById(R.id.up).setOnClickListener(MainActivity.this);
                 stub.findViewById(R.id.left).setOnClickListener(MainActivity.this);
                 stub.findViewById(R.id.select).setOnClickListener(MainActivity.this);
